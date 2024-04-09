@@ -1,0 +1,26 @@
+user
+- id int not null
+- email varchar(190) unique not null
+- password varchar(255) not null
+- created_at timestamp
+
+products
+- id int not null
+- name varchar(190)
+- price money
+
+category
+- id int not null
+- name varchar(190)
+
+category_products
+- category_id
+- product_id
+
+user_cart
+- id int not null
+- user_id int not null
+- product_id int not null
+- quantity int
+
+order
