@@ -8,6 +8,7 @@ products
 - id int not null
 - name varchar(190)
 - price money
+- created_at timestamp
 
 category
 - id int not null
@@ -17,10 +18,25 @@ category_products
 - category_id
 - product_id
 
-user_cart
+cartitem
 - id int not null
-- user_id int not null
 - product_id int not null
-- quantity int
+- cart_id int not null
+- created_at timestamp
+
+cart
+- id int not null
+- created_at timestamp
 
 order
+- id
+- user_id
+- total
+- created_at timestamp
+
+orderitem
+- id
+- quantity
+- order_id
+- product_id
+- created_at timestamp
